@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Frontend</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+        .card {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 999;
+        }
+
+
+        .zoomed-image {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 80%;
+            max-height: 80%;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="overlay"></div>
+
+<!--navbar start-->
+<nav class="navbar navbar-dark bg-dark fixed-top">
+    <div class=" container">
+        <a class="navbar-brand" href="#"><i class="bi bi-camera"></i>&nbsp;Album</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+                aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+             aria-labelledby="offcanvasDarkNavbarLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Album</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+<!--navbar end-->
+
+<div class="container ">
+    <div class="d-flex justify-content-center" style="margin-top: 100px">
+        <div class="text-center mt-5 col-lg-7 ">
+            <h1>Album example</h1>
+            <p>Something short and leading about the collection below—its contents, the creator, etc. Make it short and
+                sweet, but not too short so folks don't simply skip over it entirely.</p>
+            <div class="d-flex justify-content-center">
+                <button class="btn btn-primary me-2">Main call to action</button>
+                <button class="btn btn-secondary">Secondary action</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center" style="margin-top: 100px">
+        <div class="card p-0 col-lg-4 col-md-6 m-3" style="width: 22rem;">
+            <img src="https://images.pexels.com/photos/776635/pexels-photo-776635.jpeg?auto=compress&cs=tinysrgb&w=600"
+                 class="card-img-top" alt="">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <div class="justify-content-center d-flex ">
+                    <button class="btn btn-primary show-btn">Zoom</button>
+                </div>
+            </div>
+        </div>
+        <div class="card p-0 col-lg-4 col-md-6 m-3" style="width: 22rem;">
+            <img src="https://images.pexels.com/photos/18548431/pexels-photo-18548431/free-photo-of-a-typewriter-with-the-word-holistic-health-on-it.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                 class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <div class="justify-content-center d-flex ">
+                    <button class="btn btn-primary show-btn">Zoom</button>
+                </div>
+            </div>
+        </div>
+        <div class="card p-0 col-lg-4 col-md-6 m-3" style="width: 22rem;">
+            <img src="https://images.pexels.com/photos/8801167/pexels-photo-8801167.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                 class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <div class="justify-content-center d-flex ">
+                    <button class="btn btn-primary show-btn">Zoom</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card p-0 col-lg-4 col-md-6 m-3" style="width: 22rem;">
+            <img src="https://images.pexels.com/photos/2167039/pexels-photo-2167039.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                 class="card-img-top" alt="">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <div class="justify-content-center d-flex">
+                    <button class="btn btn-primary show-btn">Zoom</button>
+                </div>
+            </div>
+        </div>
+        <div class="card p-0 col-lg-4 col-md-6 m-3" style="width: 22rem;">
+            <img src="https://images.pexels.com/photos/17399231/pexels-photo-17399231/free-photo-of-adobe-buildings-of-taourirt-kasbah-fortress-ouarzazate-morocco.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                 class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <div class="justify-content-center d-flex ">
+                    <button class="btn btn-primary show-btn">Zoom</button>
+                </div>
+            </div>
+        </div>
+        <div class="card p-0 col-lg-4 col-md-6 m-3" style="width: 22rem;">
+            <img src="https://images.pexels.com/photos/19869392/pexels-photo-19869392/free-photo-of-dolomiti.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                 class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <div class="justify-content-center d-flex ">
+                    <button class="btn btn-primary show-btn">Zoom</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <footer class="py-3 my-4">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item">
+                <a href="#" class="nav-link px-2 text-muted">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link px-2 text-muted">Features</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link px-2 text-muted">Pricing</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link px-2 text-muted">FAQs</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link px-2 text-muted">About</a>
+            </li>
+        </ul>
+        <p class="text-center text-muted">© 2024 Company, Inc</p>
+    </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".show-btn").click(function () {
+            $(".overlay").show();
+            $("<img>")
+                .attr("src", $(this).closest(".card").find(".card-img-top").attr("src"))
+                .addClass("zoomed-image")
+                .appendTo(".overlay");
+        });
+
+
+        $(".overlay").click(function () {
+            $(this).hide();
+            $(".zoomed-image").remove();
+        });
+    });
+</script>
+</body>
+</html>
